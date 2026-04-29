@@ -6,7 +6,7 @@ with open(file="requirements.txt", mode="r") as file:
 setup(
     name="medical-rag-chatbot",
     version="0.1.0",
-    author="Saad Tariq",
+    author="NIKHITHA ",
     packages=find_packages(),
     install_requires=requirements
 )
