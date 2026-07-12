@@ -1,75 +1,39 @@
-# 🏥 Medical RAG Chatbot
+# 🩺 Medical Chatbot Using Retrieval-Augmented Generation (RAG)
 
-Medical RAG Chatbot is a **Retrieval-Augmented Generation (RAG)** application that answers medical questions using trusted knowledge extracted from PDF documents (e.g., guidelines, manuals, clinical notes). It combines **Groq LLM**, **Hugging Face embeddings**, **FAISS vector search**, and **LangChain** to provide grounded answers with relevant context.
+An AI-powered medical chatbot that provides context-aware responses by retrieving relevant information from a medical knowledge base using Retrieval-Augmented Generation (RAG).
 
-The app provides a Flask backend API, a lightweight HTML/CSS frontend, containerization with Docker, vulnerability scanning using Trivy, and CI/CD automation via Jenkins for AWS deployment.
+## 📌 Overview
 
----
+This project combines Large Language Models (LLMs) with semantic search to answer medical-related queries accurately by retrieving relevant documents instead of relying only on the model's internal knowledge.
 
-## ✨ Features
+## 🚀 Features
 
-- 📄 Ingest medical PDFs using PyPDF
-- 🔍 Semantic retrieval using Hugging Face embeddings + FAISS
-- 🤖 Context-grounded answers using Groq LLM
-- 🔗 LangChain orchestration for RAG pipeline (retrieval + generation)
-- 🌐 Flask API for chat + ingestion endpoints
-- 🎨 Simple HTML/CSS web UI
-- 🐳 Dockerized application for consistent deployment
-- 🔐 Security scanning using Aqua Trivy (Docker image vulnerabilities)
-- 🔁 Jenkins CI/CD pipeline for automated build, scan, and deploy
-- ☁️ AWS deployment-ready workflow
+- Medical question answering
+- Retrieval-Augmented Generation (RAG)
+- Semantic similarity search
+- PDF knowledge base support
+- Context-aware responses
+- Interactive chatbot interface
 
----
+## 🛠 Tech Stack
 
-## 🧠 How It Works (RAG Flow)
+- Python
+- LangChain
+- ChromaDB
+- Sentence Transformers
+- Hugging Face
+- Streamlit
+- Docker
 
-1. PDFs are loaded and text is extracted using **PyPDF**
-2. Text is chunked and embedded using **Hugging Face embeddings**
-3. Embeddings are indexed in **FAISS**
-4. User query is embedded and matched against FAISS for top relevant chunks
-5. Retrieved context is passed to the **Groq LLM** via **LangChain**
-6. Chatbot returns an answer grounded in retrieved evidence
+## 📂 Project Structure
 
----
+## ⚙️ Installation
 
-## 🧱 Tech Stack
-
-| Category | Tools |
-|---------|------|
-| LLMs | Groq |
-| Embeddings | Hugging Face |
-| RAG Framework | LangChain |
-| Vector Store | FAISS (local) |
-| PDF Processing | PyPDF |
-| Backend | Flask |
-| Frontend | HTML / CSS |
-| Containerization | Docker |
-| Security Scanning | Aqua Trivy |
-| CI/CD | Jenkins |
-| Cloud | AWS |
-| SCM | GitHub |
-
----
-
-# ⚙️ Setup & Run Locally
-## 1️⃣ Clone
 ```bash
-git clone https://github.com/your-username/medical-rag-chatbot.git
-cd medical-rag-chatbot
-```
+git clone https://github.com/nikhitha164/MEDICAL-CHATBOT-USING-RAG.git
 
-## 2️⃣ Create virtual environment (recommended)
-```bash
-python -m venv ven
-source venv/bin/activate   # Windows: venv\Scripts\activate
-```
+cd MEDICAL-CHATBOT-USING-RAG
 
-## 3️⃣ Install dependencies
-```bash
-pip install -e .
-```
+pip install -r requirements.txt
 
-## 4️⃣ Run Flask backend
-```bash
-python src/app.py
-```
+streamlit run app.py
